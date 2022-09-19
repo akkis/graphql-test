@@ -4,7 +4,6 @@ const {
   GraphQLSchema,
   GraphQLObjectType,
   GraphQLString,
-  GraphQLInputObjectType,
   GraphQLList,
   GraphQLInt,
   GraphQLNonNull,
