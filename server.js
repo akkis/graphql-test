@@ -7,7 +7,6 @@ const {
   GraphQLList,
   GraphQLInt,
   GraphQLNonNull,
-  GraphQLID,
 } = require('graphql');
 
 const app = express();
@@ -119,12 +118,12 @@ const RootMutationType = new GraphQLObjectType({
       type: AuthorType,
       description: 'Add an author',
       args: {
-        name: { type: GraphQLNonNull(GraphQLString) }
+        name: { type: GraphQLNonNull(GraphQLString) },
       },
       resolve: (parent, args) => {
         const author = {
           id: authors.length + 1,
-          name: args.name
+          name: args.name,
         };
 
         authors.push(author);
